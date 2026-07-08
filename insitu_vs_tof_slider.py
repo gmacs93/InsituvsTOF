@@ -8,8 +8,55 @@ import matplotlib.pyplot as plt
 # -------------------------
 st.set_page_config(layout="wide")
 
-st.title("In situ density vs momentum distribution")
 
+st.title("BEC wavefunction: In-situ density modulation vs momentum peaks")
+
+st.markdown(
+r"""
+### Physical picture
+
+We consider a simple one-dimensional model of a Bose-Einstein condensate
+with a coherent contribution from the zero-momentum state and a pair of
+symmetric recoiling momentum states:
+
+\[
+\psi(x)=e^{-x^2/(2\sigma^2)}
+\left(c_0+c_1\cos(k_0x)\right)
+\]
+
+where:
+
+- \(e^{-x^2/(2\sigma^2)}\) is the Gaussian envelope of the condensate,
+- \(c_0=\sqrt{1-p}\) is the population in the original condensate mode,
+- \(c_1=\sqrt{p}\) is the population transferred to the recoiling modes,
+- \(k_0\) is the recoil momentum.
+
+The cosine term corresponds to a coherent superposition of two momentum
+states:
+
+\[
+\cos(k_0x)=\frac{1}{2}(e^{ik_0x}+e^{-ik_0x})
+\]
+
+so the momentum distribution should contain peaks around:
+
+\[
+k=0,\quad k=\pm k_0 .
+\]
+
+The purpose of this simulation is to visualize the relation between:
+
+1. **In situ density modulation**  
+   The interference between the zero-momentum and recoiling components creates
+   spatial density fringes.
+
+2. **Momentum-space distribution**  
+   The Fourier transform reveals the underlying momentum components.
+
+The slider changes the fraction of atoms transferred into the recoiling
+state and shows how the density contrast and momentum peaks evolve.
+"""
+)
 
 # -------------------------
 # Parameters
