@@ -1,6 +1,6 @@
-# In-situ vs TOF
+# In situ vs TOF
 
-Interactive in-situ density vs time-of-flight (TOF) momentum visualization with a recoil population slider.
+Interactive in situ density vs time-of-flight (TOF) momentum visualization with a recoil population slider.
 
 ## Quick start
 
@@ -17,4 +17,4 @@ pip install -r requirements.txt
 python insitu_vs_tof_slider.py
 ```
 
-Use the **Recoiling population** slider to explore how the in-situ density contrast and momentum distribution change.
+Use the **Recoiling population** slider to explore how the in situ density contrast and momentum distribution change.

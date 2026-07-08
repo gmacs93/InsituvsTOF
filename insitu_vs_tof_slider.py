@@ -54,7 +54,7 @@ def update(p):
     ax1.plot(x, density)
     ax1.set_xlabel("x")
     ax1.set_ylabel(r"$|\psi(x)|^2$")
-    ax1.set_title(f"In situ density\nContrast={contrast:.2f}")
+    ax1.set_title(f"In situ density\ncontrast={contrast:.2f}")
     ax1.grid()
 
     ax2.plot(k, momentum)
