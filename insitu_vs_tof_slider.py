@@ -9,52 +9,68 @@ import matplotlib.pyplot as plt
 st.set_page_config(layout="wide")
 
 
-st.title("BEC wavefunction: In-situ density modulation vs momentum peaks")
+st.title("BEC wavefunction: density modulation and momentum peaks")
+
 
 st.markdown(
-r"""
+"""
 ### Physical picture
 
-We consider a simple one-dimensional model of a Bose-Einstein condensate
-with a coherent contribution from the zero-momentum state and a pair of
-symmetric recoiling momentum states:
+We consider a one-dimensional model of a Bose-Einstein condensate with a
+coherent contribution from the zero-momentum state and a pair of symmetric
+recoiling momentum states.
 
-\[
+The wavefunction is:
+"""
+)
+
+st.latex(
+r"""
 \psi(x)=e^{-x^2/(2\sigma^2)}
 \left(c_0+c_1\cos(k_0x)\right)
-\]
+"""
+)
 
+
+st.markdown(
+"""
 where:
 
-- \(e^{-x^2/(2\sigma^2)}\) is the Gaussian envelope of the condensate,
-- \(c_0=\sqrt{1-p}\) is the population in the original condensate mode,
-- \(c_1=\sqrt{p}\) is the population transferred to the recoiling modes,
+- The Gaussian term describes the condensate envelope.
+- \(c_0\) is the population in the original zero-momentum mode.
+- \(c_1\) is the population transferred to the recoiling modes.
 - \(k_0\) is the recoil momentum.
 
-The cosine term corresponds to a coherent superposition of two momentum
-states:
+The cosine term represents a coherent superposition of two momentum states:
+"""
+)
 
-\[
-\cos(k_0x)=\frac{1}{2}(e^{ik_0x}+e^{-ik_0x})
-\]
 
-so the momentum distribution should contain peaks around:
+st.latex(
+r"""
+\cos(k_0x)=\frac{1}{2}
+\left(e^{ik_0x}+e^{-ik_0x}\right)
+"""
+)
 
-\[
-k=0,\quad k=\pm k_0 .
-\]
 
-The purpose of this simulation is to visualize the relation between:
+st.markdown(
+"""
+Therefore, the Fourier transform should show three momentum components:
+
+- a central peak at \(k=0\),
+- two symmetric recoil peaks at \(k=\pm k_0\).
+
+The simulation illustrates the connection between:
 
 1. **In situ density modulation**  
-   The interference between the zero-momentum and recoiling components creates
-   spatial density fringes.
+   caused by interference between the condensate and recoiling components,
 
-2. **Momentum-space distribution**  
-   The Fourier transform reveals the underlying momentum components.
+2. **Momentum distribution**  
+   obtained from the Fourier transform of the wavefunction.
 
-The slider changes the fraction of atoms transferred into the recoiling
-state and shows how the density contrast and momentum peaks evolve.
+Use the slider to change the transferred population and observe how the
+density contrast and momentum peaks evolve.
 """
 )
 
