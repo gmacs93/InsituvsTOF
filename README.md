@@ -1,4 +1,4 @@
-# InsituvsTOF
+# Insitu vs TOF
 
 Interactive in-situ density vs time-of-flight (TOF) momentum visualization with a recoil population slider.
 
