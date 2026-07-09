@@ -112,7 +112,7 @@ c1 = np.sqrt(p)
 
 # coherent superposition of 0 and ±k0 momentum states
 psi = envelope * (c0 + c1 * np.cos(k0 * x))
-psi = envelope * (c1 * np.abs(np.cos(k0 * x)))
+#psi = envelope * (c1 * np.abs(np.cos(k0 * x)))
 density = np.abs(psi)**2
 
 
